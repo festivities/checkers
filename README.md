@@ -1,0 +1,2 @@
+# checkers
+spaghetti checkers
