@@ -125,7 +125,7 @@ void targetSelect(struct Checker (*const checkerPtr)[BOARDSIZE][BOARDSIZE], cons
             if((*checkerPtr)[initialPos.y][initialPos.x - 2].isPiece && (*checkerPtr)[initialPos.y][initialPos.x - 2].team)
                 (*checkerPtr)[initialPos.y][initialPos.x - 2].isPiece = 0;
         --whiteCount;
-        printf("\n\n\n white count is: %u, diffPos.x is: %d, diffPos.y is: %d", whiteCount, diffPos.x, diffPos.y);
+        //printf("\n\n\n white count is: %u, diffPos.x is: %d, diffPos.y is: %d", whiteCount, diffPos.x, diffPos.y);
     }
 
     if((*checkerPtr)[initialPos.y - 1][initialPos.x - 1].isQueen)
@@ -205,7 +205,7 @@ int main(){
                 if(rowIndex != columnIndex){
                     board[rowIndex][columnIndex].team = rowIndex > (BOARDSIZE / 2 - 1);
                     board[rowIndex][columnIndex].isPiece = (rowIndex % 2) != (columnIndex % 2); // xor
-                    board[rowIndex][columnIndex].isQueen = 1; // assume every piece is not a queen for now
+                    board[rowIndex][columnIndex].isQueen = 0; // assume every piece is not a queen for now
                     board[rowIndex][columnIndex].pos.x = columnIndex; board[rowIndex][columnIndex].pos.y = rowIndex;
                 }
         }
